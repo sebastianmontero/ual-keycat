@@ -1,5 +1,5 @@
 import { Authenticator, UALError, UALErrorType } from 'universal-authenticator-library';
-import { Keycat } from 'keycatjs';
+import { Keycat } from '@smontero/keycatjs';
 import KeycatLogo from './KeycatLogo';
 import KeycatUser from './KeycatUser';
 

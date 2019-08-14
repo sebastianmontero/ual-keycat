@@ -1,6 +1,6 @@
 {
   "name": "@smontero/ual-keycat",
-  "version": "1.0.3",
+  "version": "1.0.16",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,8 @@
     "name": "Sebastian Montero"
   },
   "dependencies": {
+    "@smontero/keycatjs": "^0.9.4",
     "eosjs": "^20.0.0-56c14a9.0",
-    "keycatjs": "^0.9.1",
     "text-encoding": "^0.7.0",
     "universal-authenticator-library": "0.1.0"
   },
