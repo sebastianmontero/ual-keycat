@@ -42,9 +42,9 @@ class KeycatUser extends User {
      */
     async signArbitrary(publicKey, data) {
         try {
-            await this.keycat
+            return await this.keycat
                 .account(this.accountName)
-                .signArbitraryData([data]);
+                .signArbitraryData(data);
         } catch (err) {
             throw new UALError('Error signing arbitrary data', UALErrorType.Signing, err);
         }
