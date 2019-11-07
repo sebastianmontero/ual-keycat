@@ -4,8 +4,9 @@ import KeycatLogo from './KeycatLogo';
 import KeycatUser from './KeycatUser';
 
 const chainMap = {
-    e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473: 'eos-jungle',
-    aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906: 'eos',
+    'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473': 'eos-jungle',
+    'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906': 'eos',
+    '4667b205c6838ef70ff7988f6e8257e8be0e1284a2f59699054a018f743b1d11': 'telos',
 };
 
 class KeycatAuthenticator extends Authenticator {
