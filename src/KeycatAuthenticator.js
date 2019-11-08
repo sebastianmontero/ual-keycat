@@ -17,7 +17,6 @@ class KeycatAuthenticator extends Authenticator {
         selectedChainId = selectedChainId || chains[0].chainId;
         this.keycatMap = this._getKeycatMap(chains);
         this.selectedChainId = selectedChainId;
-        this.keycat = this.keycatMap[selectedChainId];
     }
 
     _getKeycatMap(chains) {
@@ -43,8 +42,12 @@ class KeycatAuthenticator extends Authenticator {
     }
 
     async init() {
-        this.keycatIsLoading = false;
         this.keycatError = null;
+        this.keycatIsLoading = false;
+        this.keycat = this.keycatMap[this.selectedChainId];
+        if (!this.keycat) {
+            this.keycatError = new UALError(`Chain: ${this.selectedChainId} not supported`, UALErrorType.Initialization);
+        }
     }
 
     /**
