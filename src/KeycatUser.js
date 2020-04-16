@@ -21,13 +21,17 @@ class KeycatUser extends User {
     */
     async signTransaction(transaction, { broadcast = true, blocksBehind = 3, expireSeconds = 30 }) {
         try {
-            await this.keycat
+            const { processed, transaction_id: transactionId } = await this.keycat
                 .account(this.accountName)
                 .transact(transaction, {
                     broadcast,
                     blocksBehind,
                     expireSeconds,
                 });
+            return {
+                processed,
+                transactionId,
+            };
         } catch (err) {
             throw new UALError('Error signing transaction', UALErrorType.Signing, err);
         }
